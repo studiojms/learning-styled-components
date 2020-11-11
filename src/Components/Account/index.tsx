@@ -13,15 +13,15 @@ const Account = () => {
 
   return (
     <div className="box">
-      <h2>Conta</h2>
+      <h2>Account</h2>
       <div style={{ fontSize: "26px", padding: "20px 0" }}>
-        Saldo disponível{" "}
+        Balance{" "}
         <span>
-          <img className="imagem-icone" src={moneyIcon} alt="Ícone Saldo" />
+          <img className="imagem-icone" src={moneyIcon} alt="Balance Icon" />
         </span>
         {toggleState ? (
           <div className="saldo">
-            <span className="detalhe">R$</span> 0,00{" "}
+            <span className="detalhe">US$</span> 0,00{" "}
           </div>
         ) : null}
       </div>
@@ -31,7 +31,7 @@ const Account = () => {
           style={{ marginTop: "2px" }}
           className="imagem-icone"
           src={toggleState ? privateIcon : eyeIcon}
-          alt="Privacidade do Saldo"
+          alt="Balance Privacy"
         />
       </button>
     </div>
