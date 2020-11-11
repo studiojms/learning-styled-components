@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import privado from "../../assets/images/privado.svg";
-import olho_icone from "../../assets/images/olho.svg";
-import dinheiro from "../../assets/images/dinheiro.svg";
+import privateIcon from "../../assets/images/private.svg";
+import eyeIcon from "../../assets/images/eye.svg";
+import moneyIcon from "../../assets/images/money.svg";
 
-const Conta = () => {
+const Account = () => {
   const [toggleState, untoggle] = useState(true);
 
   const toggleHandler = () => {
@@ -17,7 +17,7 @@ const Conta = () => {
       <div style={{ fontSize: "26px", padding: "20px 0" }}>
         Saldo disponível{" "}
         <span>
-          <img className="imagem-icone" src={dinheiro} alt="Ícone Saldo" />
+          <img className="imagem-icone" src={moneyIcon} alt="Ícone Saldo" />
         </span>
         {toggleState ? (
           <div className="saldo">
@@ -30,7 +30,7 @@ const Conta = () => {
         <img
           style={{ marginTop: "2px" }}
           className="imagem-icone"
-          src={toggleState ? privado : olho_icone}
+          src={toggleState ? privateIcon : eyeIcon}
           alt="Privacidade do Saldo"
         />
       </button>
@@ -38,4 +38,4 @@ const Conta = () => {
   );
 };
 
-export default Conta;
+export default Account;

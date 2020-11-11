@@ -2,7 +2,7 @@ import React from "react";
 
 import bank_logo from "../../assets/images/bank_logo.svg";
 
-const Cabecalho = () => {
+const Header = () => {
   return (
     <div className="cabecalho">
       <img className="imagem-logo" src={bank_logo} alt="Logo Smart Bank" />
@@ -18,4 +18,4 @@ const Cabecalho = () => {
   );
 };
 
-export default Cabecalho;
+export default Header;
