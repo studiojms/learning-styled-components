@@ -1,8 +1,19 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
-import privateIcon from "../../assets/images/private.svg";
-import eyeIcon from "../../assets/images/eye.svg";
-import moneyIcon from "../../assets/images/money.svg";
+import privateIcon from '../../assets/images/private.svg';
+import eyeIcon from '../../assets/images/eye.svg';
+import moneyIcon from '../../assets/images/money.svg';
+import { Balance, Box, Button, Detail, Icon } from '../UI';
+
+const IconMargin = styled(Icon)`
+  margin-top: 2px;
+`;
+
+const BalanceSection = styled.div`
+  font-size: 26px;
+  padding: 20px 0;
+`;
 
 const Account = () => {
   const [toggleState, untoggle] = useState(true);
@@ -12,29 +23,24 @@ const Account = () => {
   };
 
   return (
-    <div className="box">
+    <Box>
       <h2>Account</h2>
-      <div style={{ fontSize: "26px", padding: "20px 0" }}>
-        Balance{" "}
+      <BalanceSection>
+        Balance{' '}
         <span>
-          <img className="imagem-icone" src={moneyIcon} alt="Balance Icon" />
+          <Icon src={moneyIcon} alt="Balance Icon" />
         </span>
         {toggleState ? (
-          <div className="saldo">
-            <span className="detalhe">US$</span> 0,00{" "}
-          </div>
+          <Balance>
+            <Detail>US$</Detail> 0,00
+          </Balance>
         ) : null}
-      </div>
+      </BalanceSection>
 
-      <button className="btn" onClick={toggleHandler}>
-        <img
-          style={{ marginTop: "2px" }}
-          className="imagem-icone"
-          src={toggleState ? privateIcon : eyeIcon}
-          alt="Balance Privacy"
-        />
-      </button>
-    </div>
+      <Button onClick={toggleHandler}>
+        <IconMargin src={toggleState ? privateIcon : eyeIcon} alt="Balance Privacy" />
+      </Button>
+    </Box>
   );
 };
 
