@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Title from '../Title';
 import Account from '../Account';
+import BankStatement from '../../BankStatement';
 
 const Container = styled.div`
   background-color: #f1f1f1;
@@ -26,6 +27,7 @@ const ContainerWrapper = () => {
       <Title>Hello User!</Title>
       <Content>
         <Account />
+        <BankStatement />
       </Content>
     </Container>
   );
