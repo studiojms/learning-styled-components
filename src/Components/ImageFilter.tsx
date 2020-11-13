@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Icon } from './UI';
+import { IconTheme } from './UI';
 
 import food from '../assets/images/food.svg';
 import health from '../assets/images/health.svg';
@@ -37,7 +37,7 @@ const ImageFilter: React.FC<{ type: string }> = ({ type }) => {
       break;
   }
 
-  return <Icon src={icon} alt={type} />;
+  return <IconTheme src={icon} alt={type} />;
 };
 
 export default ImageFilter;

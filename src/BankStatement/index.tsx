@@ -9,7 +9,7 @@ const BankStatement = () => {
   return (
     <Box>
       {bankInfoList.updates.map((bankInfo: IBankInfo) => (
-        <ItemList {...bankInfo} />
+        <ItemList key={bankInfo.id} {...bankInfo} />
       ))}
       <Button>More</Button>
     </Box>
